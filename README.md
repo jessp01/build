@@ -32,7 +32,7 @@ Before you begin, ensure you have the following:
 - Basic knowledge of shell scripting and Linux system administration
 - Required packages: `bash`, `coreutils`, `gcc`, `make`, `wget`, `curl`, `git`
 
-Run the following script "01Requirements" to know if your host system have all the packages required to build Libero GNU/Linux.
+Run `01Requirements` to check whether your host system includes all packages required to build Libero GNU/Linux.
 
 ## Getting Started
 
@@ -47,7 +47,7 @@ To get started with building LiberoLinux, follow these steps:
 
 2. **Install necessary dependencies:**
 
-   Depending on your base system, install the required packages. For example, on Debian/Ubuntu:
+   Depending on your base system, install the required packages, for example, on Debian/Ubuntu:
 
    ```bash
    sudo apt-get update
@@ -57,9 +57,9 @@ To get started with building LiberoLinux, follow these steps:
 3. **Configure your build:**
 
    Edit the configuration files in this directory to set up your desired build environment.
-   You can set CFLAGS and CXXFlags to your needs despite is not recommended because it can brake the system.
+   You can adjust `CFLAGS` and `CXXFLAGS` to suit your needs but keep in mind that it may break the system.
 
-   Edit "DEVICE" variable before running scripts in order to install Libero GNU/Linux on the destination Hard-Drive on the following scripts:
+   Edit "DEVICE" variable before running scripts in order to install Libero GNU/Linux on the destination hard drive on the following scripts:
 
    02Preparation and 10MakingLiberoBootable
 
@@ -72,11 +72,11 @@ To get started with building LiberoLinux, follow these steps:
    ```
 
    The script will download, compile, and install the selected components based on your configuration.
-   Then, after 02Preparation script, run the following scripts by numeric order, next one "03CrossCompiler" and so on.
+   Then, after 02Preparation script, run the following scripts in numeric order, next one "03CrossCompiler" and so on.
 
 ## Network Configuration
 
-After Building and boot into Libero GNU/Linux and you need to configure Network, it is advisable to read Chapter 9.2 from Linux From Scratch Book.
+After Building and booting into Libero GNU/Linux, you need to configure networking, it is advisable to read Chapter 9.2 from Linux From Scratch Book.
 Here's a snippet:
 
 The command below creates a basic configuration file for an IPv4 DHCP setup:
@@ -92,7 +92,7 @@ UseDomains=true
 EOF
 ```
 
-For Static IP Address you can edit the following file:
+For a static IP address, you can edit the following file:
 
 ```bash
 cat > /etc/systemd/network/10-eth-static.network << "EOF"
@@ -125,7 +125,7 @@ We welcome contributions from the community! If you'd like to contribute, please
 5. Push to the branch (`git push origin feature-branch`).
 6. Create a new Pull Request.
 
-Please make sure your code adheres to our coding standards and includes appropriate tests.
+Please ensure your code adheres to our coding standards and includes appropriate tests.
 
 ## License
 
